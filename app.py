@@ -19,7 +19,7 @@ def calcular_interes():
             resultado = f"El interés es {interes:.2f} y el monto total a pagar es {total:.2f}."
         except ValueError:
             resultado = "Error: Asegúrate de ingresar números válidos."
-    return render_template('calcular_interes.html', resultado=resultado)
+    return render_template('/calcular_interes.html', resultado=resultado)
 
 @app.route('/dividir_terrenos', methods=['GET', 'POST'])
 def dividir_terrenos():
@@ -31,7 +31,7 @@ def dividir_terrenos():
             resultado = f"Cada parte será de {metros / partes:.2f} metros cuadrados."
         except ValueError:
             resultado = "Error: Asegúrate de ingresar números válidos."
-    return render_template('dividir_terrenos.html', resultado=resultado)
+    return render_template('/dividir_terrenos.html', resultado=resultado)
 
 if __name__ == '__main__':
     app.run(debug=True)
